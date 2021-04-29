@@ -1,10 +1,9 @@
 package com.kikulabs.academy.ui.detail
 
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import com.kikulabs.academy.R
+import com.kikulabs.academy.databinding.ActivityDetailCourseBinding
+import com.kikulabs.academy.databinding.ContentDetailCourseBinding
 
 class DetailCourseActivity : AppCompatActivity() {
 
@@ -12,16 +11,18 @@ class DetailCourseActivity : AppCompatActivity() {
         const val EXTRA_COURSE = "extra_course"
     }
 
+    private lateinit var detailContentBinding: ContentDetailCourseBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_course)
-        setSupportActionBar(findViewById(R.id.toolbar))
 
+        val activityDetailCourseBinding = ActivityDetailCourseBinding.inflate(layoutInflater)
+        detailContentBinding = activityDetailCourseBinding.detailContent
+
+        setContentView(activityDetailCourseBinding.root)
+
+        setSupportActionBar(activityDetailCourseBinding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
     }
 }
