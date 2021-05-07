@@ -1,16 +1,15 @@
 package com.kikulabs.academy.ui.reader.content
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.kikulabs.academy.R
-import com.kikulabs.academy.data.ContentEntity
 import com.kikulabs.academy.data.ModuleEntity
 import com.kikulabs.academy.databinding.FragmentModuleContentBinding
 import com.kikulabs.academy.ui.reader.CourseReaderViewModel
+import com.kikulabs.academy.viewmodel.ViewModelFactory
 
 class ModuleContentFragment : Fragment() {
 
@@ -26,7 +25,8 @@ class ModuleContentFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        fragmentModuleContentBinding = FragmentModuleContentBinding.inflate(inflater, container, false)
+        fragmentModuleContentBinding =
+            FragmentModuleContentBinding.inflate(inflater, container, false)
         return fragmentModuleContentBinding.root
     }
 
@@ -34,14 +34,21 @@ class ModuleContentFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         if (activity != null) {
-            val viewModel = ViewModelProvider(requireActivity(), ViewModelProvider.NewInstanceFactory())[CourseReaderViewModel::class.java]
+
+            val factory = ViewModelFactory.getInstance(requireActivity())
+            val viewModel =
+                ViewModelProvider(requireActivity(), factory)[CourseReaderViewModel::class.java]
             val module = viewModel.getSelectedModule()
             populateWebView(module)
         }
     }
 
     private fun populateWebView(module: ModuleEntity) {
-        fragmentModuleContentBinding.webView.loadData(module.contentEntity?.content ?: "", "text/html", "UTF-8")
+        fragmentModuleContentBinding.webView.loadData(
+            module.contentEntity?.content ?: "",
+            "text/html",
+            "UTF-8"
+        )
     }
 
 }
