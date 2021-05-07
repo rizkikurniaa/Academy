@@ -14,7 +14,7 @@ import com.kikulabs.academy.data.CourseEntity
 import com.kikulabs.academy.databinding.ActivityDetailCourseBinding
 import com.kikulabs.academy.databinding.ContentDetailCourseBinding
 import com.kikulabs.academy.ui.reader.CourseReaderActivity
-import com.kikulabs.academy.utils.DataDummy
+import com.kikulabs.academy.viewmodel.ViewModelFactory
 
 class DetailCourseActivity : AppCompatActivity() {
 
@@ -37,7 +37,8 @@ class DetailCourseActivity : AppCompatActivity() {
 
         val adapter = DetailCourseAdapter()
 
-        val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[DetailCourseViewModel::class.java]
+        val factory = ViewModelFactory.getInstance(this)
+        val viewModel = ViewModelProvider(this, factory)[DetailCourseViewModel::class.java]
 
         val extras = intent.extras
         if (extras != null) {
