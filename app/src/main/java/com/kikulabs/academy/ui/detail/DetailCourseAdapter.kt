@@ -3,7 +3,7 @@ package com.kikulabs.academy.ui.detail
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.kikulabs.academy.data.ModuleEntity
+import com.kikulabs.academy.data.source.local.entity.ModuleEntity
 import com.kikulabs.academy.databinding.ItemsModuleListBinding
 
 class DetailCourseAdapter : RecyclerView.Adapter<DetailCourseAdapter.ModuleViewHolder>() {

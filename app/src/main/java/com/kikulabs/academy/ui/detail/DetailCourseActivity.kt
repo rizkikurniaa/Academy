@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.kikulabs.academy.R
-import com.kikulabs.academy.data.CourseEntity
+import com.kikulabs.academy.data.source.local.entity.CourseEntity
 import com.kikulabs.academy.databinding.ActivityDetailCourseBinding
 import com.kikulabs.academy.databinding.ContentDetailCourseBinding
 import com.kikulabs.academy.ui.reader.CourseReaderActivity

@@ -1,4 +1,4 @@
-package com.kikulabs.academy.data
+package com.kikulabs.academy.data.source.local.entity
 
 data class ModuleEntity(
     var moduleId: String,

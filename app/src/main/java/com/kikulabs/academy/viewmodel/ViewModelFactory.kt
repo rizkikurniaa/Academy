@@ -3,7 +3,7 @@ package com.kikulabs.academy.viewmodel
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.kikulabs.academy.data.source.AcademyRepository
+import com.kikulabs.academy.data.AcademyRepository
 import com.kikulabs.academy.di.Injection
 import com.kikulabs.academy.ui.academy.AcademyViewModel
 import com.kikulabs.academy.ui.bookmark.BookmarkViewModel
