@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.kikulabs.academy.data.ModuleEntity
+import com.kikulabs.academy.data.source.local.entity.ModuleEntity
 import com.kikulabs.academy.databinding.FragmentModuleContentBinding
 import com.kikulabs.academy.ui.reader.CourseReaderViewModel
 import com.kikulabs.academy.viewmodel.ViewModelFactory

@@ -1,9 +1,9 @@
 package com.kikulabs.academy.ui.detail
 
 import androidx.lifecycle.ViewModel
-import com.kikulabs.academy.data.CourseEntity
-import com.kikulabs.academy.data.ModuleEntity
-import com.kikulabs.academy.data.source.AcademyRepository
+import com.kikulabs.academy.data.source.local.entity.CourseEntity
+import com.kikulabs.academy.data.source.local.entity.ModuleEntity
+import com.kikulabs.academy.data.AcademyRepository
 
 class DetailCourseViewModel(private val academyRepository: AcademyRepository) : ViewModel() {
     private lateinit var courseId: String

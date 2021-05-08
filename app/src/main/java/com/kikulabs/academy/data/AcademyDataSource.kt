@@ -1,7 +1,7 @@
-package com.kikulabs.academy.data.source
+package com.kikulabs.academy.data
 
-import com.kikulabs.academy.data.CourseEntity
-import com.kikulabs.academy.data.ModuleEntity
+import com.kikulabs.academy.data.source.local.entity.CourseEntity
+import com.kikulabs.academy.data.source.local.entity.ModuleEntity
 
 interface AcademyDataSource {
 

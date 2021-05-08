@@ -1,8 +1,8 @@
 package com.kikulabs.academy.ui.reader
 
 import androidx.lifecycle.ViewModel
-import com.kikulabs.academy.data.ModuleEntity
-import com.kikulabs.academy.data.source.AcademyRepository
+import com.kikulabs.academy.data.source.local.entity.ModuleEntity
+import com.kikulabs.academy.data.AcademyRepository
 
 class CourseReaderViewModel(private val academyRepository: AcademyRepository) : ViewModel() {
 

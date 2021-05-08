@@ -3,7 +3,7 @@ package com.kikulabs.academy.ui.reader.list
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.kikulabs.academy.data.ModuleEntity
+import com.kikulabs.academy.data.source.local.entity.ModuleEntity
 import com.kikulabs.academy.databinding.ItemsModuleListCustomBinding
 
 class ModuleListAdapter internal constructor(private val listener: MyAdapterClickListener) : RecyclerView.Adapter<ModuleListAdapter.ModuleViewHolder>() {
